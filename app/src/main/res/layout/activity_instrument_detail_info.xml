@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_my_favorite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ff161224.cc_commander.shareplatform.InstrumentDetailInfoActivity">
+
+    <!-- 标题 -->
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo111"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tittle_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tittle_edit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <!--  android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" -->
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/logo1"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#eeeeee">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout_shouye"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:tabMode="scrollable"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@android:color/holo_red_dark">
+
+        </android.support.design.widget.TabLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_ShouYe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

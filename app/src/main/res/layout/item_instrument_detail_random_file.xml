@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 随机文档TextView -->
+    <TextView
+        android:id="@+id/random_file_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+    <!-- 随机文档编号TextView -->
+
+    <!-- 随机文档基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 文档名称 -->
+        <TextView
+            android:id="@+id/random_file_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="文档名称：透射显微镜说明书"/>
+        <!-- 文档名称 -->
+
+        <!-- 文档份数 -->
+        <TextView
+            android:id="@+id/random_file_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="文档份数：1"/>
+        <!-- 文档份数 -->
+
+        <!-- 文档页码 -->
+        <TextView
+            android:id="@+id/random_file_page_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="文档页码：25"/>
+        <!-- 文档页码 -->
+
+    </LinearLayout>
+    <!-- 仪器基本信息线性布局 -->
+
+</LinearLayout>

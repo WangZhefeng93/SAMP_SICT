@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 仪器编号TextView -->
+    <TextView
+        android:id="@+id/time_order_instrument_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+    <!-- 仪器编号TextView -->
+
+    <!-- 仪器基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 仪器名称 -->
+        <TextView
+            android:id="@+id/time_order_instrument_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="仪器名称：透射显微镜"/>
+        <!-- 仪器名称 -->
+
+        <!-- 最大样品估计量 -->
+        <TextView
+            android:id="@+id/time_order_max_plan_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="最大样品估计量：50"/>
+        <!-- 最大样品估计量 -->
+
+        <!-- 最大样品数 -->
+        <TextView
+            android:id="@+id/time_order_max_sample_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="最大样品数：3333"/>
+        <!-- 最大样品数 -->
+
+        <!-- 支持自动预约 -->
+        <TextView
+            android:id="@+id/time_order_support_auto_order_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="是否支持自动预约：支持"/>
+        <!-- 支持自动预约 -->
+
+    </LinearLayout>
+    <!-- 仪器基本信息线性布局 -->
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 仪器编号TextView -->
+    <TextView
+        android:id="@+id/instrument_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+    <!-- 仪器编号TextView -->
+
+    <!-- 仪器基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 仪器名称 -->
+        <TextView
+            android:id="@+id/instrument_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="仪器名称：透射显微镜"/>
+        <!-- 仪器名称 -->
+
+        <!-- 仪器状态 -->
+        <TextView
+            android:id="@+id/instrument_statue_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="仪器状态：空闲"/>
+        <!-- 仪器状态 -->
+
+        <!-- 预约模式 -->
+        <TextView
+            android:id="@+id/instrument_order_model_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="预约模式：时间预约"/>
+        <!-- 预约模式 -->
+
+        <!-- 预约方式 -->
+        <TextView
+            android:id="@+id/instrument_order_way_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="预约方式：可以自动预约"/>
+        <!-- 预约方式 -->
+
+    </LinearLayout>
+    <!-- 仪器基本信息线性布局 -->
+
+    <!-- 仪器基本信息操作线性布局 -->
+    <!--<LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        &lt;!&ndash; 编辑 &ndash;&gt;
+        <TextView
+            android:id="@+id/instrument_modify_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="编辑"
+            android:textColor="#0000ff"
+            android:gravity="right"/>
+        &lt;!&ndash; 编辑 &ndash;&gt;
+
+        &lt;!&ndash; 查看 &ndash;&gt;
+        <TextView
+            android:id="@+id/instrument_check_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="查看"
+            android:textColor="#000000"
+            android:gravity="right"/>
+        &lt;!&ndash; 查看 &ndash;&gt;
+
+        &lt;!&ndash; 删除 &ndash;&gt;
+        <TextView
+            android:id="@+id/instrument_delete_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="#ff0000"
+            android:singleLine="true"
+            android:text="删除"
+            android:gravity="right"/>
+        &lt;!&ndash; 删除 &ndash;&gt;
+
+    </LinearLayout>-->
+    <!-- 仪器基本信息操作线性布局 -->
+
+</LinearLayout>

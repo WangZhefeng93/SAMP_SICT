@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EFEFF4"
+    tools:context="com.ff161224.cc_commander.shareplatform.TimeOrderListInstrumentActivity">
+
+    <!-- 引入公用标题栏布局文件 -->
+    <include
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/my_tittle_bar" />
+
+    <ListView
+        android:id="@+id/time_order_choose_instrument_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

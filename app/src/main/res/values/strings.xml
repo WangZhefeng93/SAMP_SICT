@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">仪器共享平台</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="sever_ip">172.18.41.3</string><!--lilancunwangzhefeng.duapp.com-->
+    <string name="tittle_name">仪器设备共享管理平台</string>
+    <string name="function_module_1">数据信息</string>
+    <string name="function_module_2">预约结算</string>
+    <string name="function_module_3">扫码上机</string>
+    <string name="function_module_4">个人中心</string>
+    <string name="hot_order_tip_tv">热门仪器预约</string>
+    <string name="hot_order_more_tv">查看更多</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_instrument_detail_info">InstrumentDetailInfoActivity</string>
+    <string name="title_activity_edit_random_file">EditRandomFileActivity</string>
+</resources>

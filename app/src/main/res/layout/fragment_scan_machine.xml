@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scan_machine_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_gravity="center">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 功能导航图标网格布局开始 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <com.ff161224.cc_commander.shareplatform.SearchGridView
+                    android:id="@+id/scan_machine_gview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:numColumns="3"
+
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="10dp" />
+
+            </LinearLayout>
+            <!-- 功能导航图标网格布局结束 -->
+            
+            <!-- 显示注意事项开始 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="80dp"
+                android:orientation="vertical">
+
+                <!-- 注意事项 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="注意事项"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="1、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="2、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="3、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="4、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="5、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:textSize="16dp"/>
+
+            </LinearLayout>
+            <!-- 显示注意事项结束 -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

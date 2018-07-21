@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 耗材编号TextView -->
+    <TextView
+        android:id="@+id/time_order_choose_coast_num_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+    <!-- 耗材编号TextView -->
+
+    <!-- 耗材基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 耗材名称 -->
+        <TextView
+            android:id="@+id/time_order_choose_coast_num_coast_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="耗材名称：玻璃刀"/>
+        <!-- 耗材名称 -->
+
+        <!-- 耗材单位 -->
+        <TextView
+            android:id="@+id/time_order_choose_coast_num_coast_weight_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="耗材单位：个"/>
+        <!-- 耗材单位 -->
+
+        <!-- 耗材数量 -->
+        <TextView
+            android:id="@+id/time_order_choose_coast_num_coast_total_num_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="耗材数量：10"/>
+        <!-- 耗材数量 -->
+
+        <!-- 耗材单价 -->
+        <TextView
+            android:id="@+id/time_order_choose_coast_num_coast_per_price_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="耗材单价：20.00"/>
+        <!-- 耗材单价 -->
+
+    </LinearLayout>
+    <!-- 耗材基本信息线性布局 -->
+
+    <!-- 耗材选择数量线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp">
+
+        <!-- 减一 -->
+        <TextView
+            android:id="@+id/time_order_choose_coast_num_coast_minus_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="-"/>
+        <!-- 减一 -->
+
+        <!-- 耗材订购数量 -->
+        <EditText
+            android:id="@+id/time_order_choose_coast_num_want_num_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"/>
+        <!-- 耗材订购数量 -->
+
+        <!-- 加一 -->
+        <TextView
+            android:id="@+id/time_order_choose_coast_num_coast_plus_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="+"/>
+        <!-- 加一 -->
+
+    </LinearLayout>
+    <!-- 耗材选择数量线性布局 -->
+
+</LinearLayout>
