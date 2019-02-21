@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 环境参数编号TextView -->
+    <TextView
+        android:id="@+id/environment_argument_id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+
+    <!-- 环境参数基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 环境参数名称 -->
+        <TextView
+            android:id="@+id/environment_argument_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="环境参数名称：工作温度"/>
+        <!-- 环境参数名称 -->
+
+        <!-- 环境参数单位 -->
+        <TextView
+            android:id="@+id/environment_argument_unit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="环境参数单位：摄氏度"/>
+        <!-- 环境参数单位 -->
+
+    </LinearLayout>
+    <!-- 环境参数基本信息线性布局 -->
+
+</LinearLayout>

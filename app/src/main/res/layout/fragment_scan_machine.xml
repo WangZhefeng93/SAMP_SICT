@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:text="注意事项"
+                    android:text="@string/scan_precautions"
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
@@ -64,35 +64,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:text="1、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                android:text="@string/scan_precautions_content1"
                 android:textSize="16dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:text="2、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:text="@string/scan_precautions_content2"
                     android:textSize="16dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:text="3、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:text="@string/scan_precautions_content3"
                     android:textSize="16dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:text="4、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:text="@string/scan_precautions_content4"
                     android:textSize="16dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
-                    android:text="5、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的"
+                    android:text="@string/scan_precautions_content5"
                     android:textSize="16dp"/>
 
             </LinearLayout>

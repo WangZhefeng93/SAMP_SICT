@@ -5,7 +5,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
 android:background="#EFEFF4"
-tools:context="com.ff161224.cc_commander.shareplatform.TimeOrderChooseTimeActivity">
+tools:context="com.ff161224.cc_commander.shareplatform.main.orderReview.timeOrder.TimeOrderChooseTimeActivity">
 
 <!-- 标题 -->
 <LinearLayout

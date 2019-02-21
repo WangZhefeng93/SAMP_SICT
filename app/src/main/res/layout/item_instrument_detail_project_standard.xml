@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 项目标准编号TextView -->
+    <TextView
+        android:id="@+id/project_standard_id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+
+    <!-- 项目标准基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 分析项目名称 -->
+        <TextView
+            android:id="@+id/project_standard_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="分析项目名称：化石三维无损成像"/>
+        <!-- 分析项目名称 -->
+
+        <!-- 分析项目标准 -->
+        <TextView
+            android:id="@+id/project_standard_standard_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="分析项目标准：用户指定"/>
+        <!-- 分析项目标准 -->
+
+        <!-- 是否启用 -->
+        <TextView
+            android:id="@+id/project_standard_start_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="是否启用标准：是"/>
+        <!-- 是否启用 -->
+
+    </LinearLayout>
+    <!-- 主要零件基本信息线性布局 -->
+
+</LinearLayout>

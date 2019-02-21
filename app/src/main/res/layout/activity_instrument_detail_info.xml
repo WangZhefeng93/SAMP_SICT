@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.ff161224.cc_commander.shareplatform.InstrumentDetailInfoActivity">
+    tools:context=".main.dataInfo.instrumentInfo.detail.InstrumentDetailInfoActivity">
 
     <!-- 标题 -->
     <LinearLayout

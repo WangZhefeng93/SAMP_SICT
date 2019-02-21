@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#EFEFF4"
-    tools:context="com.ff161224.cc_commander.shareplatform.TimeOrderChooseCoastNumActivity">
+    tools:context="com.ff161224.cc_commander.shareplatform.main.orderReview.timeOrder.TimeOrderChooseCoastNumActivity">
 
     <!-- 引入公用标题栏布局文件 -->
     <include

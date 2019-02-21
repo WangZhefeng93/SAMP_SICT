@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".welcome.LaunchActivity">
+        <activity android:name=".launch.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,20 +24,30 @@
         <activity
             android:name=".login.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".InstrumentInfoActivity" />
-        <activity android:name=".InstrumentDetailInfoActivity" />
-        <activity android:name=".DetailRandomFileInfo" />
-        <activity android:name=".EditRandomFileActivity" />
-        <activity android:name=".TimeOrderChooseTimeActivity" />
-        <activity android:name=".TimeOrderRecordSampleActivity" />
-        <activity android:name=".TimeOrderListInstrumentActivity" />
-        <activity android:name=".TimeOrderSampleDetailInfoActivity" />
-        <activity android:name=".TimeOrderProjectStandardActivity" />
-        <activity android:name=".TimeOrderChooseCoastNumActivity" />
-        <activity android:name=".TimeOrderShowMoneyActivity" />
-        <activity android:name=".TimeOrderSetCommentActivity" />
-        <activity android:name=".PersonInfoActivity"></activity>
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.InstrumentInfoActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.InstrumentDetailInfoActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.random.DetailRandomFileInfo" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.random.EditRandomFileActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.calibration.DetailCalibrationRecordInfo" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.calibration.EditCalibrationRecordActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderChooseTimeActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderRecordSampleActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderListInstrumentActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderSampleDetailInfoActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderProjectStandardActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderChooseCoastNumActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderShowMoneyActivity" />
+        <activity android:name=".main.orderReview.timeOrder.TimeOrderSetCommentActivity" />
+        <activity android:name=".PersonInfo.PersonInfoActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.component.DetailMainComponentInfo" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.component.EditMainComponentActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.project.DetailProjectStandardInfo" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.project.EditProjectStandardActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.coast.DetailCoastInfoInfo" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.coast.EditCoastInfoActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.environment.DetailEnvironmentArgumentInfo" />
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.environment.EditEnvironmentArgumentActivity"></activity>
     </application>
 
 </manifest>

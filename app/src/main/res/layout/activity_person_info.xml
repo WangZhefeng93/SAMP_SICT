@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#EFEFF4"
-    tools:context="com.ff161224.cc_commander.shareplatform.PersonInfoActivity">
+    tools:context="com.ff161224.cc_commander.shareplatform.PersonInfo.PersonInfoActivity">
 
     <!-- 标题 -->
     <include
@@ -55,7 +55,7 @@
                         android:textColor="#000000"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="头像"/>
+                        android:text="@string/pia_avatar"/>
 
                 </LinearLayout>
 
@@ -111,7 +111,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#000000"
-                        android:text="姓名"/>
+                        android:text="@string/pia_name"/>
 
                 </LinearLayout>
 
@@ -172,7 +172,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#000000"
-                        android:text="学号"/>
+                        android:text="@string/pia_student_no"/>
 
                 </LinearLayout>
 
@@ -233,7 +233,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#000000"
-                        android:text="学院"/>
+                        android:text="@string/pia_school"/>
 
                 </LinearLayout>
 
@@ -294,7 +294,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#000000"
-                        android:text="班级"/>
+                        android:text="@string/pia_class"/>
 
                 </LinearLayout>
 
@@ -355,7 +355,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="#000000"
-                        android:text="信用等级"/>
+                        android:text="@string/pia_credit_level"/>
 
                 </LinearLayout>
 
@@ -413,7 +413,7 @@
                         android:textColor="#000000"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="修改用户密码"/>
+                        android:text="@string/pia_modify_password"/>
 
                 </LinearLayout>
 
@@ -465,7 +465,7 @@
                         android:textColor="#000000"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="账号绑定设置"/>
+                        android:text="@string/pia_account_binding_setting"/>
 
                 </LinearLayout>
 

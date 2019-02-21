@@ -9,12 +9,10 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewTreeObserver;
@@ -26,7 +24,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ff161224.cc_commander.shareplatform.MainActivity;
+import com.ff161224.cc_commander.shareplatform.main.MainActivity;
 import com.ff161224.cc_commander.shareplatform.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -71,8 +69,8 @@ public class LoginActivity extends AppCompatActivity {
         intent = getIntent();
         login_model_flag = intent.getIntExtra("login_model_flag",1);
         forget_password_flag = intent.getIntExtra("forget_password_flag",1);
-        pref_student_number = intent.getStringExtra("pref_student_number");
-        pref_password = intent.getStringExtra("pref_password");
+        //pref_student_number = intent.getStringExtra("pref_student_number");
+        //pref_password = intent.getStringExtra("pref_password");
         //去掉标题栏
         getSupportActionBar().hide();
         //加载布局
@@ -152,8 +150,8 @@ public class LoginActivity extends AppCompatActivity {
                     login_tip.setVisibility(View.VISIBLE);
 
                     //记住账号密码，实现下次自动登录
-                    if ("".equals(pref_student_number) && "".equals(pref_password))
-                        remember(student_number,password);
+                    /*if ("".equals(pref_student_number) && "".equals(pref_password))
+                        remember(student_number,password);*/
 
                     //开启子线程。将学号与密码发送给服务器端，在服务器端完成验证后返回登录消息
                     intent = new Intent(LoginActivity.this,MainActivity.class);
@@ -308,6 +306,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //实现在账号和密码登录的时候完成记住密码操作，下次直接到主页，无需登录
     private void remember(String student_number, String password) {
+        pref = PreferenceManager.getDefaultSharedPreferences(this);
         //调用SharedPreferences对象的edit()方法获取一个SharedPreferences.Editor对象
         editor = pref.edit();
         //向SharedPreferences.Editor对象添加数据

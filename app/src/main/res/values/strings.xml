@@ -3,12 +3,67 @@
     <string name="title_activity_login">Sign in</string>
     <string name="sever_ip">172.18.41.3</string><!--lilancunwangzhefeng.duapp.com-->
     <string name="tittle_name">仪器设备共享管理平台</string>
+
+    <!-- MainActivity底部导航图标提示 -->
     <string name="function_module_1">数据信息</string>
     <string name="function_module_2">预约结算</string>
     <string name="function_module_3">扫码上机</string>
     <string name="function_module_4">个人中心</string>
+
+    <!-- DataInfoFragment标题设置及图标提示 -->
+    <string name="instrument_information">仪器信息</string>
+    <string name="analysis_project">分析项目</string>
+    <string name="supplies_information">耗材信息</string>
+    <string name="standard_information">标准信息</string>
+    <string name="price_information">价格信息</string>
+    <string name="log_information">日志信息</string>
+    <string name="statistical_information">统计信息</string>
+    <string name="personnel_information">人员信息</string>
+    <string name="permissions_settings">权限设置</string>
+
+    <!-- OrderReviewFragment图标提示 -->
     <string name="hot_order_tip_tv">热门仪器预约</string>
     <string name="hot_order_more_tv">查看更多</string>
+    <string name="time_order">时间预约</string>
+    <string name="project_order">项目预约</string>
+    <string name="order_check">预约审核</string>
+    <string name="entrustment_management">委托单管理</string>
+    <string name="entrustment_settlement">委托单结算</string>
+    <string name="cost_settlement">委托单结算</string>
+
+    <!-- ScanMachineFragment图标提示 -->
+    <string name="scan_up_machine_operation">扫码上机</string>
+    <string name="scan_down_machine_operation">扫码下机</string>
+    <string name="scan_connect_admin">联系管理员</string>
+
+    <!--ScanMachineFragment注意事项及内容-->
+    <string name="scan_precautions">注意事项</string>
+    <string name="scan_precautions_content1">1、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的</string>
+    <string name="scan_precautions_content2">2、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的</string>
+    <string name="scan_precautions_content3">3、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的</string>
+    <string name="scan_precautions_content4">4、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的</string>
+    <string name="scan_precautions_content5">5、卡拉圣诞节了就发生了的看见分厘卡圣诞节快乐圣诞节快乐福建山东老家分厘卡似的</string>
+
+    <!--PersonalCenterFragment栏位提示-->
+    <string name="personal_information">个人信息</string>
+    <string name="order_record">预约记录</string>
+    <string name="ordered_instrument">已预约仪器</string>
+    <string name="my_favorite">我的收藏</string>
+    <string name="advice_feedback">意见反馈</string>
+    <string name="logout">退出登录</string>
+
+    <!--PersonInfoActivity栏位提示-->
+    <string name="pia_personal_information">个人信息</string>
+    <string name="pia_avatar">头像</string>
+    <string name="pia_name">姓名</string>
+    <string name="pia_student_no">学号</string>
+    <string name="pia_school">学校</string>
+    <string name="pia_class">班级</string>
+    <string name="pia_credit_level">信用等级</string>
+    <string name="pia_modify_password">修改用户密码</string>
+    <string name="pia_account_binding_setting">账号绑定设置</string>
+
+    <!-- 登录错误提示 -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -25,4 +80,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_instrument_detail_info">InstrumentDetailInfoActivity</string>
     <string name="title_activity_edit_random_file">EditRandomFileActivity</string>
+    <string name="title_activity_detail_coast_info_info">DetailCoastInfoInfo</string>
 </resources>
