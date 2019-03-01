@@ -43,7 +43,7 @@ public class InstrumentDetailBasicInfoFragment extends Fragment {
 
             //绑定编辑按钮
             edit_instrument_detail_basic_info_tv = (TextView) rootView.findViewById(R.id.edit_instrument_detail_basic_info_tv);
-            edit_instrument_detail_basic_info_tv2 = (TextView) rootView.findViewById(R.id.edit_instrument_detail_basic_info_tv2);
+            //edit_instrument_detail_basic_info_tv2 = (TextView) rootView.findViewById(R.id.edit_instrument_detail_basic_info_tv2);
             edit_instrument_detail_basic_info_tv3 = (TextView) rootView.findViewById(R.id.edit_instrument_detail_basic_info_tv3);
 
             //为编辑按钮设置点击监听器
@@ -53,12 +53,12 @@ public class InstrumentDetailBasicInfoFragment extends Fragment {
                     Toast.makeText(getActivity(), "编辑基本信息", Toast.LENGTH_SHORT).show();
                 }
             });
-            edit_instrument_detail_basic_info_tv2.setOnClickListener(new View.OnClickListener() {
+            /*edit_instrument_detail_basic_info_tv2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getActivity(), "编辑进口设备信息", Toast.LENGTH_SHORT).show();
                 }
-            });
+            });*/
             edit_instrument_detail_basic_info_tv3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

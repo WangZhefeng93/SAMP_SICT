@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="order_type_spinner_array">
+        <item>-请选择-</item>
+        <item>时间预约</item>
+        <item>项目预约</item>
+    </string-array>
+    <string-array name="order_format_spinner_array">
+        <item>-请选择-</item>
+        <item>必须预约</item>
+        <item>免预约</item>
+        <item>可不预约</item>
+    </string-array>
+    <string-array name="instrument_procedure_spinner_array">
+        <item>-请选择-</item>
+        <item>无需审核</item>
+        <item>预约审核</item>
+        <item>样品登记</item>
+        <item>分析结果</item>
+        <item>结果发放</item>
+    </string-array>
+    <string-array name="instrument_state_spinner_array">
+        <item>正常</item>
+        <item>故障</item>
+        <item>维修</item>
+        <item>停用</item>
+        <item>报废</item>
+        <item>离线</item>
+    </string-array>
+</resources>

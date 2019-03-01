@@ -47,7 +47,21 @@
         <activity android:name=".main.dataInfo.instrumentInfo.detail.coast.DetailCoastInfoInfo" />
         <activity android:name=".main.dataInfo.instrumentInfo.detail.coast.EditCoastInfoActivity" />
         <activity android:name=".main.dataInfo.instrumentInfo.detail.environment.DetailEnvironmentArgumentInfo" />
-        <activity android:name=".main.dataInfo.instrumentInfo.detail.environment.EditEnvironmentArgumentActivity"></activity>
+        <activity android:name=".main.dataInfo.instrumentInfo.detail.environment.EditEnvironmentArgumentActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.basic.CreateNewInstrumentActivity1" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.order.CreateNewInstrumentActivity2" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.random.CreateNewInstrumentActivity3" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.random.AddNewRandomFileActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.calibration.CreateNewInstrumentActivity4" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.calibration.AddNewCalibrationRecordActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.component.CreateNewInstrumentActivity5" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.component.AddNewMainComponentActivity" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.environment.CreateNewInstrumentActivity8" />
+        <activity android:name=".main.dataInfo.instrumentInfo.create.environment.AddEnvironmentArgumentActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

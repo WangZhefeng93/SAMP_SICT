@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ff161224.cc_commander.shareplatform.R;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.create.basic.CreateNewInstrumentActivity1;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.detail.InstrumentDetailInfoActivity;
 
 import java.util.ArrayList;
@@ -68,6 +69,8 @@ public class InstrumentInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(InstrumentInfoActivity.this, "开始新建仪器信息", Toast.LENGTH_SHORT).show();
+                intent = new Intent(InstrumentInfoActivity.this,CreateNewInstrumentActivity1.class);
+                startActivity(intent);
             }
         });
 
