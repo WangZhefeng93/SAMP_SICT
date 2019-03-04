@@ -2,6 +2,12 @@ package com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.cre
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +23,12 @@ import com.bigkoo.pickerview.TimePickerView;
 import com.ff161224.cc_commander.shareplatform.R;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.InstrumentInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.create.order.CreateNewInstrumentActivity2;
+import com.ff161224.cc_commander.shareplatform.utils.ChoosePhotoFromAlbum;
+import com.ff161224.cc_commander.shareplatform.utils.ChoosePhotoFromCamera;
+import com.ff161224.cc_commander.shareplatform.utils.FileUtils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -53,6 +64,11 @@ public class CreateNewInstrumentActivity1 extends AppCompatActivity {
 
     //声明其他变量
     private Intent intent;
+    private CharSequence []items = {"拍照","从相册选择"};
+    public static final int CUT_PICTURE = 1;
+    public static final int SHOW_PICTURE = 2;
+    private static final int MSG_TAKE_PHOTO = 1;
+    public Uri imageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +78,7 @@ public class CreateNewInstrumentActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_create_new_instrument1);
         //为控件变量与布局文件中的控件进行绑定
         initWidget();
+        //FileUtils.init();
         //为取消按钮设置点击监听器
         setOnClickListenerForCancle();
         //为保存按钮设置点击监听器
@@ -81,9 +98,70 @@ public class CreateNewInstrumentActivity1 extends AppCompatActivity {
         create_new_instrument_photo_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                create_new_instrument_photo_imageView.setImageResource(R.drawable.carousel_figure_1);
-            }
-        });
+                new AlertDialog.Builder(CreateNewInstrumentActivity1.this)
+                    .setTitle("上传仪器照片")
+                    .setItems(items, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which) {
+                                case 0://拍照
+                                    Toast.makeText(CreateNewInstrumentActivity1.this, "调用系统自带照相机拍照", Toast.LENGTH_SHORT).show();
+                                    imageUri = new ChoosePhotoFromCamera().jump2Camera(CreateNewInstrumentActivity1.this,CUT_PICTURE);
+                                    break;
+                                case 1://从相册选择
+                                    Toast.makeText(CreateNewInstrumentActivity1.this, "使用系统自带相册中的照片", Toast.LENGTH_SHORT).show();
+                                    imageUri = new ChoosePhotoFromAlbum().chooseFromAlbum(CreateNewInstrumentActivity1.this,CUT_PICTURE);
+                                    break;
+                            }
+                        }
+                    })
+                    .create()
+                    .show();
+                }
+            });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case CUT_PICTURE:
+                if (resultCode == RESULT_OK) {
+                    if (data != null){
+                        //此处启动裁剪程序
+                        Intent intent = new Intent("com.android.camera.action.CROP");
+                        intent.setDataAndType(data.getData(), "image/*");
+                        intent.putExtra("scale", true);
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                        startActivityForResult(intent, SHOW_PICTURE);
+                    }else {
+                        //此处启动裁剪程序
+                        Intent intent = new Intent("com.android.camera.action.CROP");
+                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                        intent.setDataAndType(imageUri, "image/*");
+                        intent.putExtra("scale", true);
+                        File outputImage = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
+                                + "/test/output_image.jpg");
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(outputImage));
+                        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+                        startActivityForResult(intent, SHOW_PICTURE);
+                    }
+                }
+                break;
+            case SHOW_PICTURE:
+                if (resultCode == RESULT_OK) {
+                    try {
+                        //将output_image.jpg对象解析成Bitmap对象，然后设置到ImageView中显示出来
+                        Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver()
+                                .openInputStream(imageUri));
+                        create_new_instrument_photo_imageView.setImageBitmap(bitmap);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            default:
+                break;
+        }
     }
 
     /**
