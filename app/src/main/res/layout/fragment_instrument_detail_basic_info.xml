@@ -77,6 +77,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_ID_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6006001"
@@ -120,94 +121,10 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_name_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="透射电子显微镜"
-                        android:layout_weight="1"
-                        android:textColor="#000000"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- 分割线 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-
-            <!-- 仪器英文名称 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="#000000"
-                        android:text="仪器英文名称："
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Transmission Electron Microscope"
-                        android:layout_weight="1"
-                        android:textColor="#000000"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- *****************************************分割线******************************************** -->
-
-            <!-- 出厂编号 -->
-            <LinearLayout
-                android:id="@+id/have_ordered_linearlayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:layout_marginTop="20dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="#000000"
-                        android:text="出厂编号："
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="12-12-25"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -248,9 +165,10 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_typeID_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="JEM-1400型"
+                        android:text="JSM-1230"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -263,10 +181,228 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp" />
 
+            <!-- 资产编号 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="资产编号："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_arpID_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3086"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 仪器大类名称 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="仪器大类名称："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_type1_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="室内分析测试设备"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 仪器中类名称 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="仪器中类名称："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_type2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="显微镜及图像分析仪器"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 仪器小类名称 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="仪器小类名称："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_type3_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电子显微镜"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 仪器英文名称 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="仪器英文名称："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_engName_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transmission Electron Microscope"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- *****************************************分割线******************************************** -->
+
             <!-- 制造商 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:background="#ffffff"
                 android:paddingTop="8dp"
                 android:paddingBottom="2dp"
@@ -291,9 +427,54 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_makeFactory_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="日本电子株式会社"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 经销商 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="经销商："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_saleFactory_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日本技术"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -334,52 +515,10 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_country_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="日本"
-                        android:layout_weight="1"
-                        android:textColor="#000000"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- 分割线 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-
-            <!-- 经办领用人 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="#000000"
-                        android:text="经办领用人："
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="闻杰"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -420,6 +559,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_buyDate_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2007-12-31"
@@ -463,9 +603,99 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_buyCoast_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="￥2416850.2"
+                        android:text="￥1850247.9"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 出厂编号 -->
+            <LinearLayout
+                android:id="@+id/have_ordered_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="出厂编号："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_factoryID_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12-12-25"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 经办领用人 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="经办领用人："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_dealPerson_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="闻杰"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -506,6 +736,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_moneySource_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="科技基础条件平台专项"
@@ -516,16 +747,14 @@
 
             </LinearLayout>
 
-            <!-- 分割线 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
+            <!-- *****************************************分割线******************************************** -->
 
-            <!-- 研究院名 -->
+            <!-- 所属区域中心 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
+                android:layout_marginTop="20dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="2dp"
                 android:orientation="horizontal">
@@ -545,13 +774,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="#000000"
-                        android:text="研究院名："
+                        android:text="所属区域中心："
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_areaCenterName_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="药用植物研究所"
+                        android:text="南京地球资源环境大型仪器区域中心"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -564,7 +794,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp" />
 
-            <!-- 资产编号 -->
+            <!-- 所属单位名称 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -588,13 +818,58 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="#000000"
-                        android:text="资产编号："
+                        android:text="所属单位："
                         android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_unitName_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="南京地质古生物研究所"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 所属研究组名称 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20070282"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="所属研究组："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_basic_info_groupName_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -635,6 +910,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_operatePerson_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="闻杰"
@@ -678,6 +954,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_location_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="科研楼100室"
@@ -689,131 +966,6 @@
             </LinearLayout>
 
             <!-- *****************************************分割线******************************************** -->
-
-            <!-- 计费方式 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:layout_marginTop="20dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="#000000"
-                        android:text="计费方式："
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="使用时间/小时"
-                        android:layout_weight="1"
-                        android:textColor="#000000"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- 分割线 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-
-            <!-- 使用单价 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="#000000"
-                        android:text="使用单价："
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="￥200"
-                        android:layout_weight="1"
-                        android:textColor="#000000"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!-- 分割线 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
-
-            <!-- 处理数据单价 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:paddingTop="8dp"
-                android:paddingBottom="2dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="#000000"
-                        android:text="处理数据单价："
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="￥0"
-                        android:layout_weight="1"
-                        android:textColor="#000000"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
 
             <!--&lt;!&ndash; *****************************************分割线******************************************** &ndash;&gt;
 
@@ -1329,7 +1481,7 @@
 
             <!-- *****************************************分割线******************************************** -->
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1357,14 +1509,14 @@
                     android:textColor="#000000"
                     android:text="编辑"/>
 
-            </LinearLayout>
+            </LinearLayout>-->
 
             <!-- 功能描述 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:orientation="horizontal">
@@ -1389,6 +1541,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_function_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="无"
@@ -1433,6 +1586,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_basic_info_note_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="无"
@@ -1456,9 +1610,11 @@
 
             <!-- 仪器照片 -->
             <ImageView
+                android:id="@+id/instrument_basic_info_instrument_imgv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/carousel_figure_1"/>
+                android:layout_gravity="center"
+                android:src="@drawable/carousel_figure_6"/>
 
         </LinearLayout>
     </ScrollView>

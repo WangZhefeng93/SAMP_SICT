@@ -26,4 +26,27 @@
         </LinearLayout>
     </ScrollView>
 
+    <!-- 添加按钮 -->
+    <LinearLayout
+        android:id="@+id/logout_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/add_file_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:text="添加"/>
+
+    </LinearLayout>
+
 </LinearLayout>

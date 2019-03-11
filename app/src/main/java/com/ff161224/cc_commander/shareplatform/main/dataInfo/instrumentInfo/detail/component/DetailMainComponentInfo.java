@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ff161224.cc_commander.shareplatform.R;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.edit.EditMainComponentActivity;
 
 public class DetailMainComponentInfo extends AppCompatActivity {
     //定义属性

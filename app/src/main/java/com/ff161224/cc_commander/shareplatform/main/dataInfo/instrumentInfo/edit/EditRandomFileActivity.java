@@ -1,9 +1,9 @@
-package com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.detail.calibration;
+package com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.edit;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -11,9 +11,9 @@ import android.widget.Toast;
 
 import com.ff161224.cc_commander.shareplatform.R;
 
-public class EditCalibrationRecordActivity extends AppCompatActivity {
+public class EditRandomFileActivity extends AppCompatActivity {
     //定义属性
-    private TextView tittle_edit_calibration_record_canncle_tv,tittle_edit_calibration_record_save_tv;
+    private TextView tittle_edit_random_file_canncle_tv,tittle_edit_random_file_name_tv,tittle_edit_random_file_save_tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +22,16 @@ public class EditCalibrationRecordActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         //加载布局文件
-        setContentView(R.layout.activity_edit_calibration_record);
+        setContentView(R.layout.activity_edit_random_file);
 
         //绑定取消按钮
-        tittle_edit_calibration_record_canncle_tv = (TextView)findViewById(R.id.tittle_edit_calibration_record_canncle_tv);
+        tittle_edit_random_file_canncle_tv = (TextView)findViewById(R.id.tittle_edit_random_file_canncle_tv);
 
         //为取消按钮设置点击监听器
-        tittle_edit_calibration_record_canncle_tv.setOnClickListener(new View.OnClickListener() {
+        tittle_edit_random_file_canncle_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertDialog.Builder(EditCalibrationRecordActivity.this).setTitle("系统提示")//设置对话框标题
+                new AlertDialog.Builder(EditRandomFileActivity.this).setTitle("系统提示")//设置对话框标题
                         .setMessage("点击取消，您的修改将无法保存！")//设置显示的内容
                         .setPositiveButton("确定",new DialogInterface.OnClickListener() {//添加确定按钮
                             @Override
@@ -50,19 +50,19 @@ public class EditCalibrationRecordActivity extends AppCompatActivity {
         });
 
         //绑定保存按钮
-        tittle_edit_calibration_record_save_tv = (TextView)findViewById(R.id.tittle_edit_calibration_record_save_tv);
+        tittle_edit_random_file_save_tv = (TextView)findViewById(R.id.tittle_edit_random_file_save_tv);
 
         //为保存按钮设置点击监听器
-        tittle_edit_calibration_record_save_tv.setOnClickListener(new View.OnClickListener() {
+        tittle_edit_random_file_save_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertDialog.Builder(EditCalibrationRecordActivity.this).setTitle("系统提示")//设置对话框标题
-                        .setMessage("您确定要保存对校准记录的修改吗？")//设置显示的内容
+                new AlertDialog.Builder(EditRandomFileActivity.this).setTitle("系统提示")//设置对话框标题
+                        .setMessage("您确定要保存对随机文档的修改吗？")//设置显示的内容
                         .setPositiveButton("确定",new DialogInterface.OnClickListener() {//添加确定按钮
                             @Override
                             public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
                                 // TODO Auto-generated method stub
-                                Toast.makeText(EditCalibrationRecordActivity.this, "保存修改！", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditRandomFileActivity.this, "保存修改！", Toast.LENGTH_SHORT).show();
                             }
                         }).setNegativeButton("返回",new DialogInterface.OnClickListener() {//添加返回按钮
                     @Override

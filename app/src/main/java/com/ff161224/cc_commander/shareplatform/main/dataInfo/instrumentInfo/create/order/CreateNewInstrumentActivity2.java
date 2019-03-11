@@ -26,12 +26,15 @@ public class CreateNewInstrumentActivity2 extends AppCompatActivity {
     private Spinner create_new_instrument_orderFormat_spinner;  //预约形式
     private Spinner create_new_instrument_procedure_spinner;    //仪器流程
     private Spinner create_new_instrument_state_spinner;    //仪器状态
+    private Spinner create_new_instrument_charge_spinner;   //计费方式
     private RadioGroup create_new_instrument_simpleTemplate_radioGroup; //是否是简约模板
     private RadioGroup create_new_instrument_useable_radioGroup;    //是否可用
     private RadioGroup create_new_instrument_autoOrder_radioGroup;  //是否可自动预约
     private RadioGroup create_new_instrument_machineDeal_radioGroup;    //是否机加工
     private RadioGroup create_new_instrument_sortInstrument_radioGroup; //是否测序仪
     private RadioGroup create_new_instrument_moreInMoreOut_radioGroup;  //是否是多进多出
+    private EditText create_new_instrument_usingCharge_et;  //使用单价
+    private EditText create_new_instrument_dealDataCharge_et;   //数据处理单价
     private EditText create_new_instrument_advancedDays_et; //提前预约天数
     private EditText create_new_instrument_maxOrderDays_et; //最长预约天数
     private TextView create_new_instrument_orderStartDate_tv;   //选择预约开始时间
@@ -154,12 +157,15 @@ public class CreateNewInstrumentActivity2 extends AppCompatActivity {
         create_new_instrument_orderFormat_spinner = (Spinner) findViewById(R.id.create_new_instrument_orderFormat_spinner);  //预约形式
         create_new_instrument_procedure_spinner = (Spinner) findViewById(R.id.create_new_instrument_procedure_spinner);    //仪器流程
         create_new_instrument_state_spinner = (Spinner) findViewById(R.id.create_new_instrument_state_spinner);    //仪器状态
+        create_new_instrument_charge_spinner = (Spinner) findViewById(R.id.create_new_instrument_charge_spinner);   //计费方式
         create_new_instrument_simpleTemplate_radioGroup = (RadioGroup) findViewById(R.id.create_new_instrument_simpleTemplate_radioGroup); //是否是简约模板
         create_new_instrument_useable_radioGroup = (RadioGroup) findViewById(R.id.create_new_instrument_useable_radioGroup);    //是否可用
         create_new_instrument_autoOrder_radioGroup = (RadioGroup) findViewById(R.id.create_new_instrument_autoOrder_radioGroup);  //是否可自动预约
         create_new_instrument_machineDeal_radioGroup = (RadioGroup) findViewById(R.id.create_new_instrument_machineDeal_radioGroup);    //是否机加工
         create_new_instrument_sortInstrument_radioGroup = (RadioGroup) findViewById(R.id.create_new_instrument_sortInstrument_radioGroup);  ////是否测序仪
         create_new_instrument_moreInMoreOut_radioGroup = (RadioGroup) findViewById(R.id.create_new_instrument_moreInMoreOut_radioGroup);    //是否多进多出
+        create_new_instrument_usingCharge_et = (EditText) findViewById(R.id.create_new_instrument_usingCharge_et);  //使用单价
+        create_new_instrument_dealDataCharge_et = (EditText) findViewById(R.id.create_new_instrument_dealDataCharge_et);   //数据处理单价
         create_new_instrument_advancedDays_et = (EditText) findViewById(R.id.create_new_instrument_advancedDays_et); //提前预约天数
         create_new_instrument_maxOrderDays_et = (EditText) findViewById(R.id.create_new_instrument_maxOrderDays_et); //最长预约天数
         create_new_instrument_orderStartDate_tv = (TextView) findViewById(R.id.create_new_instrument_orderStartDate_tv);   //选择预约开始时间

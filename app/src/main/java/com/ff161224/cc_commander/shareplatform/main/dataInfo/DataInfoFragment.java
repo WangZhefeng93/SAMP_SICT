@@ -18,9 +18,12 @@ import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.coastInfo.detail.CoastInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.InstrumentInfoActivity;
 import com.ff161224.cc_commander.shareplatform.R;
 import com.ff161224.cc_commander.shareplatform.SearchGridView;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.projectInfo.detail.ProjectInfoActivity;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.detail.StandardInfoActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -192,6 +195,18 @@ public class DataInfoFragment extends Fragment {
                         case 0:     //点击的是仪器信息
                             intent = new Intent(getActivity(),InstrumentInfoActivity.class);
                             startActivity(intent);
+                            break;
+                        case 1:     //点击的是分析项目
+                            intent = new Intent(getActivity(), ProjectInfoActivity.class);
+                            getActivity().startActivity(intent);
+                            break;
+                        case 2:     //点击的是耗材信息
+                            intent = new Intent(getActivity(), CoastInfoActivity.class);
+                            getActivity().startActivity(intent);
+                            break;
+                        case 3:     //点击的是标准信息
+                            intent = new Intent(getActivity(), StandardInfoActivity.class);
+                            getActivity().startActivity(intent);
                             break;
                     }
                 }

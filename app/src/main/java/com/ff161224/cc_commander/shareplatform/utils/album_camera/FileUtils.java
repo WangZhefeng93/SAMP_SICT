@@ -1,4 +1,4 @@
-package com.ff161224.cc_commander.shareplatform.utils;
+package com.ff161224.cc_commander.shareplatform.utils.album_camera;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

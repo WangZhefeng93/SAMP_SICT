@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 分析项目编号TextView -->
+    <TextView
+        android:id="@+id/project_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+    <!-- 分析项目编号TextView -->
+
+    <!-- 分析项目基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 分析项目名称 -->
+        <TextView
+            android:id="@+id/project_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="分析项目名称：大标本"/>
+        <!-- 分析项目名称 -->
+
+        <!-- 样品分类 -->
+        <TextView
+            android:id="@+id/sample_classification_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="样品分类：硅质或含硅质岩石"/>
+        <!-- 样品分类 -->
+
+        <!-- 描述 -->
+        <TextView
+            android:id="@+id/project_description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="描述：制作大标本岩石"/>
+        <!-- 描述 -->
+
+        <!-- 所属单位 -->
+        <TextView
+            android:id="@+id/project_unit_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="所属单位：南京地质古生物研究所"/>
+        <!-- 所属单位 -->
+
+        <!-- 状态 -->
+        <TextView
+            android:id="@+id/project_statue_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="状态：正常"/>
+        <!-- 状态 -->
+
+    </LinearLayout>
+    <!-- 仪器基本信息线性布局 -->
+
+    <!-- 仪器基本信息操作线性布局 -->
+    <!--<LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        &lt;!&ndash; 编辑 &ndash;&gt;
+        <TextView
+            android:id="@+id/instrument_modify_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="编辑"
+            android:textColor="#0000ff"
+            android:gravity="right"/>
+        &lt;!&ndash; 编辑 &ndash;&gt;
+
+        &lt;!&ndash; 查看 &ndash;&gt;
+        <TextView
+            android:id="@+id/instrument_check_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="查看"
+            android:textColor="#000000"
+            android:gravity="right"/>
+        &lt;!&ndash; 查看 &ndash;&gt;
+
+        &lt;!&ndash; 删除 &ndash;&gt;
+        <TextView
+            android:id="@+id/instrument_delete_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:textColor="#ff0000"
+            android:singleLine="true"
+            android:text="删除"
+            android:gravity="right"/>
+        &lt;!&ndash; 删除 &ndash;&gt;
+
+    </LinearLayout>-->
+    <!-- 仪器基本信息操作线性布局 -->
+
+</LinearLayout>

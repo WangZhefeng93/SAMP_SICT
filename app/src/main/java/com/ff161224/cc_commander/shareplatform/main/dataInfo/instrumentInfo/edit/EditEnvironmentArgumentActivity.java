@@ -1,4 +1,4 @@
-package com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.detail.environment;
+package com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.edit;
 
 import android.app.AlertDialog;
         import android.content.DialogInterface;

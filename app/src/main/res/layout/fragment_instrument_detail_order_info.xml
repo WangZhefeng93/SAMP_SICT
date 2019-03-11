@@ -47,7 +47,7 @@
 
             </LinearLayout>
 
-            <!-- 预约模式 -->
+            <!-- 预约类型 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,10 +73,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="#000000"
-                        android:text="预约模式："
+                        android:text="预约类型："
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_orderType_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="时间预约"
@@ -120,6 +121,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_orderForm_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="可预约"
@@ -163,6 +165,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_simpleTemplate_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="否"
@@ -206,9 +209,10 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_procedure_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="无"
+                        android:text="预约审核"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -249,6 +253,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_state_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="正常"
@@ -292,9 +297,10 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_useable_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="可用"
+                        android:text="是"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -302,16 +308,14 @@
 
             </LinearLayout>
 
-            <!-- 分割线 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp" />
+            <!-- *****************************************分割线******************************************** -->
 
             <!-- 提前预约天数 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
+                android:layout_marginTop="20dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="2dp"
                 android:orientation="horizontal">
@@ -335,6 +339,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_advancedDays_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="无"
@@ -378,6 +383,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_orderStartDate_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="无"
@@ -421,6 +427,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_maxOrderDays_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="无"
@@ -433,12 +440,12 @@
 
             <!-- *****************************************分割线******************************************** -->
 
-            <!-- 流程说明 -->
+            <!-- 计费方式 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="2dp"
                 android:orientation="horizontal">
@@ -458,13 +465,102 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="#000000"
-                        android:text="流程说明"
+                        android:text="计费方式："
                         android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_order_info_billingMethod_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用时间/小时"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 使用单价 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="任何流程节点被选中,则也必须经过该流程节点之前的流程 例如：【结果发放】被选中,那么该仪器也必须经过预约审核、样品登记和分析结果"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="使用单价(￥)："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_order_info_usingCharge_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 处理数据单价 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="处理数据单价(￥)："
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/instrument_order_info_dealDataCharge_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -474,7 +570,7 @@
 
             <!-- *****************************************分割线******************************************** -->
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -502,14 +598,14 @@
                     android:textColor="#000000"
                     android:text="编辑"/>
 
-            </LinearLayout>
+            </LinearLayout>-->
 
             <!-- 是否机加工 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:orientation="horizontal">
@@ -534,6 +630,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_machineDeal_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="否"
@@ -578,6 +675,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_sortInstrument_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="否"
@@ -622,6 +720,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_maxWishValue_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="50"
@@ -666,6 +765,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_moreInMoreOut_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="否"
@@ -710,6 +810,7 @@
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_oneTimeMaxValue_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="3333"
@@ -750,13 +851,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="#000000"
-                        android:text="自动预约："
+                        android:text="是否可自动预约："
                         android:layout_marginBottom="2dp"/>
 
                     <TextView
+                        android:id="@+id/instrument_order_info_autoOrder_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="可以自动预约"
+                        android:text="是"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
 
@@ -765,6 +867,45 @@
             </LinearLayout>
 
             <!-- *****************************************分割线******************************************** -->
+
+            <!--&lt;!&ndash; 流程说明 &ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_marginTop="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="流程说明"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="任何流程节点被选中,则也必须经过该流程节点之前的流程 例如：【结果发放】被选中,那么该仪器也必须经过预约审核、样品登记和分析结果"
+                        android:layout_weight="1"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>-->
 
         </LinearLayout>
     </ScrollView>

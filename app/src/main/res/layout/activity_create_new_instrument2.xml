@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#EFEFF4"
-    tools:context="com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.detail.random.EditRandomFileActivity">
+    tools:context="com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.edit.EditRandomFileActivity">
 
     <!--*****************************标题******************************************-->
     <LinearLayout
@@ -230,6 +229,47 @@
 
             </LinearLayout>
 
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!--计费方式-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="计费方式（*）："
+                        android:layout_marginBottom="2dp"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/create_new_instrument_charge_spinner"
+                        android:entries="@array/instrument_charge_spinner_array"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
             <!-- *****************************************分割线******************************************** -->
 
             <!-- 是否是简约模板 -->
@@ -379,7 +419,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#000000"
-                        android:text="是否可自动预约："
+                        android:text="是否可自动预约（*）："
                         android:layout_marginBottom="2dp"/>
 
                     <RadioGroup
@@ -596,12 +636,94 @@
 
             <!-- *****************************************分割线******************************************** -->
 
-            <!-- 提前预约天数 -->
+            <!--使用单价-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
                 android:layout_marginTop="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="使用单价(￥)（*）："
+                        android:layout_marginBottom="2dp"/>
+
+                    <EditText
+                        android:id="@+id/create_new_instrument_usingCharge_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!--处理数据单价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:paddingTop="8dp"
+                android:paddingBottom="2dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:text="处理数据单价(￥)（*）："
+                        android:layout_marginBottom="2dp"/>
+
+                    <EditText
+                        android:id="@+id/create_new_instrument_dealDataCharge_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <!-- 提前预约天数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:orientation="horizontal">
@@ -808,44 +930,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp" />
-
-            <!--流程说明-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#ffffff"
-                android:layout_marginTop="20dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_weight="3"
-                    android:gravity="left">
-
-                    <TextView
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000000"
-                        android:text="流程说明："
-                        android:layout_marginBottom="2dp"/>
-
-                    <TextView
-                        android:text="任何流程节点被选中,则也必须经过该流程节点之前的流程 例如：【结果发放】被选中,那么该仪器也必须经过预约审核、样品登记和分析结果"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000000"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
 
             <!-- *****************************************分割线******************************************** -->
 

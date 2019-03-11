@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="instrument_type1_spinner_array">
+        <item>-请选择-</item>
+        <item>室外观测设备</item>
+        <item>室内分析测试设备</item>
+        <item>工艺实验设备</item>
+        <item>计算和数据分析</item>
+        <item>大科学装置</item>
+    </string-array>
+    <string-array name="instrument_type2_spinner_array">
+        <item>-请选择-</item>
+        <item>室外观测设备</item>
+        <item>室内分析测试设备</item>
+        <item>工艺实验设备</item>
+        <item>计算和数据分析</item>
+        <item>大科学装置</item>
+    </string-array>
+    <string-array name="instrument_type3_spinner_array">
+        <item>-请选择-</item>
+        <item>室外观测设备</item>
+        <item>室内分析测试设备</item>
+        <item>工艺实验设备</item>
+        <item>计算和数据分析</item>
+        <item>大科学装置</item>
+    </string-array>
+    <string-array name="instrument_centerName_spinner_array">
+        <item>-请选择-</item>
+        <item>北京</item>
+        <item>河北</item>
+        <item>东北</item>
+        <item>广州</item>
+    </string-array>
     <string-array name="order_type_spinner_array">
         <item>-请选择-</item>
         <item>时间预约</item>
@@ -26,5 +57,14 @@
         <item>停用</item>
         <item>报废</item>
         <item>离线</item>
+    </string-array>
+    <string-array name="instrument_charge_spinner_array">
+        <item>使用时间/小时</item>
+        <item>使用次数/次</item>
+    </string-array>
+    <string-array name="instrument_operatePerson_spinner_array">
+        <item>张三</item>
+        <item>李四</item>
+        <item>王五</item>
     </string-array>
 </resources>
