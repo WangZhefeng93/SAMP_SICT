@@ -20,6 +20,7 @@ public class CreateCoastInfoActivity extends AppCompatActivity {
     private TextView create_coast_id_tv;  //耗材ID
     private EditText create_coast_name_et;    //耗材名称
     private EditText create_coast_unit_et;    //耗材单位
+    private EditText create_coast_price_et;     //耗材单价
     private EditText create_coast_num_et;     //耗材数量
     private EditText create_coast_description_et; //耗材描述
     private TextView create_coast_save_tv;    //保存修改按钮
@@ -29,6 +30,7 @@ public class CreateCoastInfoActivity extends AppCompatActivity {
     private Intent intent = null;
     private String create_coast_name_value = "";
     private String create_coast_unit_value = "";
+    private String create_coast_price_value = "";
     private String create_coast_num_value = "";
     private String create_coast_description_value = "";
 
@@ -86,6 +88,7 @@ public class CreateCoastInfoActivity extends AppCompatActivity {
         tittle_create_coast_tv = (TextView) findViewById(R.id.tittle_create_coast_tv);  //编辑耗材信息标题
         create_coast_name_et = (EditText) findViewById(R.id.create_coast_name_et);    //耗材名称
         create_coast_unit_et = (EditText) findViewById(R.id.create_coast_unit_et);    //耗材单位
+        create_coast_price_et = (EditText) findViewById(R.id.create_coast_price_et);    //耗材单价
         create_coast_num_et = (EditText) findViewById(R.id.create_coast_num_et);     //耗材数量
         create_coast_description_et = (EditText) findViewById(R.id.create_coast_description_et); //耗材描述
         create_coast_save_tv = (TextView) findViewById(R.id.create_coast_save_tv);    //保存修改按钮
@@ -129,10 +132,12 @@ public class CreateCoastInfoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 create_coast_name_value = create_coast_name_et.getText().toString();
                 create_coast_unit_value = create_coast_unit_et.getText().toString();
+                create_coast_price_value = create_coast_price_et.getText().toString();
                 create_coast_num_value = create_coast_num_et.getText().toString();
                 create_coast_description_value = create_coast_description_et.getText().toString();
                 Log.d("新建仪器名称值：",create_coast_name_value);
                 Log.d("新建仪器单位值：",create_coast_unit_value);
+                Log.d("新建仪器单价值：",create_coast_price_value);
                 Log.d("新建仪器数量值：",create_coast_num_value);
                 Log.d("新建仪器描述值：",create_coast_description_value);
                 Toast.makeText(CreateCoastInfoActivity.this, "修改耗材信息成功", Toast.LENGTH_SHORT).show();

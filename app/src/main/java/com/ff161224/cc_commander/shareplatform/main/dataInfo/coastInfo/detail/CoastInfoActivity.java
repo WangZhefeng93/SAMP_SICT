@@ -97,6 +97,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map1.put("coast_ID","耗材ID1");
         map1.put("coast_name","耗材名称1");
         map1.put("measurement_unit","个");
+        map1.put("coast_price",9.00);
         map1.put("coast_num","100");
         map1.put("coast_description","加适量的经费落实到了咖啡机");
         list.add(map1);
@@ -105,6 +106,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map2.put("coast_ID","耗材ID2");
         map2.put("coast_name","耗材名称2");
         map2.put("measurement_unit","个");
+        map2.put("coast_price",10.00);
         map2.put("coast_num","200");
         map2.put("coast_description","");
         list.add(map2);
@@ -113,6 +115,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map3.put("coast_ID","耗材ID3");
         map3.put("coast_name","耗材名称3");
         map3.put("measurement_unit","个");
+        map3.put("coast_price",8.00);
         map3.put("coast_num","300");
         map3.put("coast_description","加适量的经费落实到了咖啡机");
         list.add(map3);
@@ -121,6 +124,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map4.put("coast_ID","耗材ID4");
         map4.put("coast_name","耗材名称4");
         map4.put("measurement_unit","个");
+        map4.put("coast_price",7.00);
         map4.put("coast_num","400");
         map4.put("coast_description","");
         list.add(map4);
@@ -129,6 +133,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map5.put("coast_ID","耗材ID5");
         map5.put("coast_name","耗材名称5");
         map5.put("measurement_unit","个");
+        map5.put("coast_price",6.00);
         map5.put("coast_num","500");
         map5.put("coast_description","加适量的经费落实到了咖啡机");
         list.add(map5);
@@ -137,6 +142,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map6.put("coast_ID","耗材ID6");
         map6.put("coast_name","耗材名称6");
         map6.put("measurement_unit","个");
+        map6.put("coast_price",5.00);
         map6.put("coast_num","600");
         map6.put("coast_description","加适量的经费落实到了咖啡机");
         list.add(map6);
@@ -145,6 +151,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map7.put("coast_ID","耗材ID7");
         map7.put("coast_name","耗材名称7");
         map7.put("measurement_unit","个");
+        map7.put("coast_price",3.00);
         map7.put("coast_num","700");
         map7.put("coast_description","加适量的经费落实到了咖啡机");
         list.add(map7);
@@ -153,6 +160,7 @@ public class CoastInfoActivity extends AppCompatActivity {
         map8.put("coast_ID","耗材ID8");
         map8.put("coast_name","耗材名称8");
         map8.put("measurement_unit","个");
+        map8.put("coast_price",2.00);
         map8.put("coast_num","800");
         map8.put("coast_description","加适量的经费落实到了咖啡机");
         list.add(map8);
@@ -187,23 +195,25 @@ public class CoastInfoActivity extends AppCompatActivity {
             public View getView(int position, View convertView, ViewGroup parent) {
                 if (coast_basic_info_list_current.size() > 0){
                     //加载ListView中的每一项布局文件
-                    convertView = getLayoutInflater().inflate(R.layout.item_project_basic_info, null);
+                    convertView = getLayoutInflater().inflate(R.layout.item_coast_basic_info, null);
                     //创建适配器控件管理对象
                     ViewHolder viewHolder = new ViewHolder();
                     //为适配器布局文件绑定控件
-                    viewHolder.project_no_tv = (TextView) convertView.findViewById(R.id.project_no_tv);
-                    viewHolder.project_name_tv = (TextView) convertView.findViewById(R.id.project_name_tv);
-                    viewHolder.sample_classification_tv = (TextView) convertView.findViewById(R.id.sample_classification_tv);
-                    viewHolder.project_description_tv = (TextView) convertView.findViewById(R.id.project_description_tv);
-                    viewHolder.project_unit_name_tv = (TextView) convertView.findViewById(R.id.project_unit_name_tv);
-                    viewHolder.project_statue_tv = (TextView) convertView.findViewById(R.id.project_statue_tv);
+                    viewHolder.coast_no_tv = (TextView) convertView.findViewById(R.id.coast_no_tv);
+                    viewHolder.coast_id_tv = (TextView) convertView.findViewById(R.id.coast_id_tv);
+                    viewHolder.coast_name_tv = (TextView) convertView.findViewById(R.id.coast_name_tv);
+                    viewHolder.coast_unit_tv = (TextView) convertView.findViewById(R.id.coast_unit_tv);
+                    viewHolder.coast_price_tv = (TextView) convertView.findViewById(R.id.coast_price_tv);
+                    viewHolder.coast_num_tv = (TextView) convertView.findViewById(R.id.coast_num_tv);
+                    viewHolder.coast_description_tv = (TextView) convertView.findViewById(R.id.coast_description_tv);
                     //设置适配器控件的属性值
-                    viewHolder.project_no_tv.setText((position+1)+"、");
-                    viewHolder.project_name_tv.setText("耗材ID："+coast_basic_info_list_current.get(position).get("coast_ID").toString());
-                    viewHolder.sample_classification_tv.setText("耗材名称："+coast_basic_info_list_current.get(position).get("coast_name").toString());
-                    viewHolder.project_description_tv.setText("耗材单位："+coast_basic_info_list_current.get(position).get("measurement_unit").toString());
-                    viewHolder.project_unit_name_tv.setText("耗材数量："+coast_basic_info_list_current.get(position).get("coast_num").toString());
-                    viewHolder.project_statue_tv.setText("描述："+coast_basic_info_list_current.get(position).get("coast_description").toString());
+                    viewHolder.coast_no_tv.setText((position+1)+"、");
+                    viewHolder.coast_id_tv.setText("耗材ID："+coast_basic_info_list_current.get(position).get("coast_ID").toString());
+                    viewHolder.coast_name_tv.setText("耗材名称："+coast_basic_info_list_current.get(position).get("coast_name").toString());
+                    viewHolder.coast_unit_tv.setText("耗材单位："+coast_basic_info_list_current.get(position).get("measurement_unit").toString());
+                    viewHolder.coast_price_tv.setText("耗材单价(￥)："+coast_basic_info_list_current.get(position).get("coast_price").toString());
+                    viewHolder.coast_num_tv.setText("耗材数量："+coast_basic_info_list_current.get(position).get("coast_num").toString());
+                    viewHolder.coast_description_tv.setText("描述："+coast_basic_info_list_current.get(position).get("coast_description").toString());
                 }else {
                     //加载ListView中的每一项布局文件
                     convertView = getLayoutInflater().inflate(android.R.layout.simple_list_item_1, null);
@@ -220,9 +230,9 @@ public class CoastInfoActivity extends AppCompatActivity {
                 return convertView;
             }
             class ViewHolder {
-                protected TextView text1,project_no_tv,project_name_tv,
-                        sample_classification_tv,project_description_tv,
-                        project_unit_name_tv,project_statue_tv;
+                protected TextView text1,coast_no_tv,coast_id_tv,coast_name_tv,
+                        coast_unit_tv,coast_price_tv,
+                        coast_num_tv,coast_description_tv;
             }
         };
         //将耗材信息ListView适配器绑定适配器
