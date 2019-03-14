@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
                             this.getString(R.string.price_information),
                             this.getString(R.string.sample_information),
                             this.getString(R.string.log_information),
-                            this.getString(R.string.personnel_information),
-                            this.getString(R.string.permissions_settings)};
+                            this.getString(R.string.switch_recording),
+                            this.getString(R.string.personel_information)};
 
         //初始化预约结算Fragment图标提示
         String[] iconNameOrderReview = {this.getString(R.string.time_order),
