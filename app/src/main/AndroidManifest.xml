@@ -96,7 +96,16 @@
         <activity android:name=".main.dataInfo.standardInfo.detail.StandardInfoActivity" />
         <activity android:name=".main.dataInfo.standardInfo.create.CreateStandardInfoActivity" />
         <activity android:name=".main.dataInfo.standardInfo.edit.EditStandardInfoActivity" />
-        <activity android:name=".main.dataInfo.standardInfo.detail.StandardInfoDetailActivity"></activity>
+        <activity android:name=".main.dataInfo.standardInfo.detail.StandardInfoDetailActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.detail.PriceInfoActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.create.CreatePriceInfoActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.edit.EditPriceInfoActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.select.SelectCreatePricePersonActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.detail.PriceInfoDetailActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.select.SelectInstrumentActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.select.SelectProjectActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.select.SelectPreDealStandardActivity" />
+        <activity android:name=".main.dataInfo.priceInfo.select.SelectAnalysisProjectStandardActivity"></activity>
     </application>
 
 </manifest>

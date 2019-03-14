@@ -1,5 +1,6 @@
-package com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.detail;
+package com.ff161224.cc_commander.shareplatform.main.dataInfo.priceInfo.select;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
@@ -19,16 +20,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.ff161224.cc_commander.shareplatform.R;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.priceInfo.edit.EditPriceInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.create.CreateStandardInfoActivity;
-import com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.edit.EditStandardInfoActivity;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.detail.StandardInfoActivity;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.detail.StandardInfoDetailActivity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class StandardInfoActivity extends AppCompatActivity {
+public class SelectPreDealStandardActivity extends AppCompatActivity {
     //定义控件变量
-    private TextView tittle_create_standard_tv; //新建按钮
     private TextView tittle_name_tv;    //标题信息
     private TextView tittle_choose_tv;  //筛选按钮
     private ListView standard_basic_info_listview;  //标准下拉列表
@@ -46,7 +48,6 @@ public class StandardInfoActivity extends AppCompatActivity {
     private ArrayList<HashMap<String,Object>> standard_basic_info_list_original = new ArrayList<>();
     private ArrayList<HashMap<String,Object>> standard_basic_info_list_current = new ArrayList<>();
     private ArrayList<HashMap<String,Object>> standard_basic_info_list_result = new ArrayList<>();
-    private CharSequence []items = {"切换状态","删除"};
     private String[] standard_type_array = null;
     private ArrayAdapter<String> standard_type_adapter = null;
     private int standard_search_type_position = -1;
@@ -61,15 +62,13 @@ public class StandardInfoActivity extends AppCompatActivity {
         //去掉标题栏
         getSupportActionBar().hide();
         //加载布局文件
-        setContentView(R.layout.activity_standard_info);
+        setContentView(R.layout.activity_select_pre_deal_standard);
         //绑定控件变量
         initWidget();
-        //为新建按钮设置点击监听器
-        setOnClickListenerForCreateProjectTV();
         //设置点击筛选按钮弹出右侧栏事件监听器
         setOnClickListenerForSearchProject();
         //开启子线程获取分析项目信息
-        standard_basic_info_list_original = getProjectInfo();
+        standard_basic_info_list_original = getPreDealProjectInfo();
         standard_basic_info_list_current = (ArrayList<HashMap<String, Object>>) standard_basic_info_list_original.clone();
         //为标准信息ListView设置适配器
         createBaseAdapterForStandardtListView();
@@ -87,7 +86,6 @@ public class StandardInfoActivity extends AppCompatActivity {
      * 绑定控件变量
      */
     private void initWidget() {
-        tittle_create_standard_tv = (TextView) findViewById(R.id.tittle_create_standard_tv); //新建按钮
         tittle_name_tv = (TextView) findViewById(R.id.tittle_name_tv);    //标题信息
         tittle_choose_tv = (TextView) findViewById(R.id.tittle_choose_tv);  //筛选按钮
         standard_basic_info_listview = (ListView) findViewById(R.id.standard_basic_info_listview);  //标准下拉列表
@@ -98,20 +96,6 @@ public class StandardInfoActivity extends AppCompatActivity {
         standard_canncle_search_tv = (TextView) findViewById(R.id.standard_canncle_search_tv);    //筛选界面中的取消按钮
         standard_reset_search_tv = (TextView) findViewById(R.id.standard_reset_search_tv);  //筛选界面中的重置按钮
         standard_ok_search_tv = (TextView) findViewById(R.id.standard_ok_search_tv); //筛选界面中的确定按钮
-    }
-
-    /**
-     * 为新建按钮设置点击监听器
-     */
-    private void setOnClickListenerForCreateProjectTV() {
-        tittle_create_standard_tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(StandardInfoActivity.this, CreateStandardInfoActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     /**
@@ -127,10 +111,10 @@ public class StandardInfoActivity extends AppCompatActivity {
     }
 
     /**
-     * 开启子线程获取分析项目信息
+     * 开启子线程，获取前处理标准数据
      * @return
      */
-    public ArrayList<HashMap<String,Object>> getProjectInfo() {
+    public ArrayList<HashMap<String,Object>> getPreDealProjectInfo() {
         ArrayList<HashMap<String,Object>> list = new ArrayList<>();
 
         HashMap<String,Object> map1 = new HashMap<>();
@@ -160,15 +144,6 @@ public class StandardInfoActivity extends AppCompatActivity {
         map3.put("standard_introduction","开发江山帝景弗兰克斯建档立卡福建省了的框架房卡洛斯的减肥了开始的减肥离开");
         list.add(map3);
 
-        HashMap<String,Object> map4 = new HashMap<>();
-        map4.put("standard_no","岩石薄片制备标准");
-        map4.put("standard_name","岩石薄片制备标准");
-        map4.put("standard_type","分析项目标准");
-        map4.put("standard_state","现行");
-        map4.put("standard_classification","院标");
-        map4.put("standard_introduction","的会计师的浪费");
-        list.add(map4);
-
         HashMap<String,Object> map5 = new HashMap<>();
         map5.put("standard_no","扫描电镜前处理");
         map5.put("standard_name","扫描电镜前处理");
@@ -177,24 +152,6 @@ public class StandardInfoActivity extends AppCompatActivity {
         map5.put("standard_classification","所标");
         map5.put("standard_introduction","开发江山帝景弗兰克斯建档立卡福建省了的框架房卡洛斯的减肥了开始的减肥离开");
         list.add(map5);
-
-        HashMap<String,Object> map6 = new HashMap<>();
-        map6.put("standard_no","扫描电镜收费标准1");
-        map6.put("standard_name","试验平台收费标准");
-        map6.put("standard_type","分析项目标准");
-        map6.put("standard_state","现行");
-        map6.put("standard_classification","所标");
-        map6.put("standard_introduction","开发江山帝景弗兰克斯建档立卡福建省了的框架房卡洛斯的减肥了开始的减肥离开");
-        list.add(map6);
-
-        HashMap<String,Object> map7 = new HashMap<>();
-        map7.put("standard_no","20120302-萃取仪");
-        map7.put("standard_name","快速萃取仪标准管理");
-        map7.put("standard_type","分析项目标准");
-        map7.put("standard_state","现行");
-        map7.put("standard_classification","所标");
-        map7.put("standard_introduction","开发江山帝景弗兰克斯建档立卡福建省了的框架房卡洛斯的减肥了开始的减肥离开");
-        list.add(map7);
 
         HashMap<String,Object> map8 = new HashMap<>();
         map8.put("standard_no","JSM20130915");
@@ -282,84 +239,10 @@ public class StandardInfoActivity extends AppCompatActivity {
         standard_basic_info_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                HashMap<String,Object> map = standard_basic_info_list_current.get(position);
-                intent = new Intent(StandardInfoActivity.this,StandardInfoDetailActivity.class);
-                intent.putExtra("standardInfoMap",(Serializable)map);
-                startActivity(intent);
-            }
-        });
-        standard_basic_info_listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                new AlertDialog.Builder(StandardInfoActivity.this)
-                        .setTitle("操作标准信息")
-                        .setItems(items, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                switch (which) {
-                                    case 0:     //停用
-                                        if (usable){
-                                            new android.app.AlertDialog.Builder(StandardInfoActivity.this).setTitle("系统提示")//设置对话框标题
-                                                    .setMessage("您确定要停用标准：\n"+standard_basic_info_list_current.get(position).get("standard_name").toString()+"吗？")//设置显示的内容
-                                                    .setPositiveButton("确定",new DialogInterface.OnClickListener() {//添加确定按钮
-                                                        @Override
-                                                        public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
-                                                            // TODO Auto-generated method stub
-                                                            standard_basic_info_list_current.get(position).put("standard_state","停用");
-                                                            usable = false;
-                                                            baseAdapter.notifyDataSetChanged();
-                                                        }
-                                                    }).setNegativeButton("返回",new DialogInterface.OnClickListener() {//添加返回按钮
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {//响应事件
-                                                    // TODO Auto-generated method stub
-                                                    Log.i("alertdialog"," 请保存数据！");
-                                                }
-                                            }).show();//在按键响应事件中显示此对话框
-                                        }else {
-                                            new android.app.AlertDialog.Builder(StandardInfoActivity.this).setTitle("系统提示")//设置对话框标题
-                                                    .setMessage("您确定要启用标准：\n"+standard_basic_info_list_current.get(position).get("standard_name").toString()+"吗？")//设置显示的内容
-                                                    .setPositiveButton("确定",new DialogInterface.OnClickListener() {//添加确定按钮
-                                                        @Override
-                                                        public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
-                                                            // TODO Auto-generated method stub
-                                                            standard_basic_info_list_current.get(position).put("standard_state","现行");
-                                                            usable = true;
-                                                            baseAdapter.notifyDataSetChanged();
-                                                        }
-                                                    }).setNegativeButton("返回",new DialogInterface.OnClickListener() {//添加返回按钮
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {//响应事件
-                                                    // TODO Auto-generated method stub
-                                                    Log.i("alertdialog"," 请保存数据！");
-                                                }
-                                            }).show();//在按键响应事件中显示此对话框
-                                        }
-                                        break;
-                                    case 1:     //删除
-                                        new android.app.AlertDialog.Builder(StandardInfoActivity.this).setTitle("系统提示")//设置对话框标题
-                                                .setMessage("您确定要删除标准：\n"+standard_basic_info_list_current.get(position).get("standard_name").toString()+"吗？")//设置显示的内容
-                                                .setPositiveButton("确定",new DialogInterface.OnClickListener() {//添加确定按钮
-                                                    @Override
-                                                    public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
-                                                        // TODO Auto-generated method stub
-                                                        standard_basic_info_list_current.remove(position);
-                                                        baseAdapter.notifyDataSetChanged();
-                                                    }
-                                                }).setNegativeButton("返回",new DialogInterface.OnClickListener() {//添加返回按钮
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {//响应事件
-                                                // TODO Auto-generated method stub
-                                                Log.i("alertdialog"," 请保存数据！");
-                                            }
-                                        }).show();//在按键响应事件中显示此对话框
-                                        break;
-                                }
-                            }
-                        })
-                        .create()
-                        .show();
-                return true;
+                intent = new Intent(SelectPreDealStandardActivity.this,EditPriceInfoActivity.class);
+                intent.putExtra("pre_deal_standard_name",standard_basic_info_list_current.get(position).get("standard_name").toString());
+                setResult(Activity.RESULT_OK, intent);
+                finish();
             }
         });
     }
@@ -381,7 +264,7 @@ public class StandardInfoActivity extends AppCompatActivity {
      * @return
      */
     public String[] getStandardTypeArray() {
-        return new String[]{"--请选择--","前处理标准","分析项目标准"};
+        return new String[]{"--请选择--","前处理标准"};
     }
 
     /**
@@ -529,4 +412,5 @@ public class StandardInfoActivity extends AppCompatActivity {
             return standard_basic_info_list_original;
         }
     }
+
 }

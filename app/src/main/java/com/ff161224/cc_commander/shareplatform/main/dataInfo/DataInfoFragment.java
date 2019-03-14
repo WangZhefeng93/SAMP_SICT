@@ -22,6 +22,7 @@ import com.ff161224.cc_commander.shareplatform.main.dataInfo.coastInfo.detail.Co
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.InstrumentInfoActivity;
 import com.ff161224.cc_commander.shareplatform.R;
 import com.ff161224.cc_commander.shareplatform.SearchGridView;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.priceInfo.detail.PriceInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.projectInfo.detail.ProjectInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.detail.StandardInfoActivity;
 
@@ -190,7 +191,7 @@ public class DataInfoFragment extends Fragment {
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Toast.makeText(getActivity(), "你点击了第"+(position+1)+"个图标\n功能是："+iconName[position], Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getActivity(), "你点击了第"+(position+1)+"个图标\n功能是："+iconName[position], Toast.LENGTH_SHORT).show();
                     switch (position){
                         case 0:     //点击的是仪器信息
                             intent = new Intent(getActivity(),InstrumentInfoActivity.class);
@@ -206,6 +207,10 @@ public class DataInfoFragment extends Fragment {
                             break;
                         case 3:     //点击的是标准信息
                             intent = new Intent(getActivity(), StandardInfoActivity.class);
+                            getActivity().startActivity(intent);
+                            break;
+                        case 4:
+                            intent = new Intent(getActivity(), PriceInfoActivity.class);
                             getActivity().startActivity(intent);
                             break;
                     }

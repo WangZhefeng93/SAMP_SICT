@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标准价格编号TextView -->
+    <TextView
+        android:id="@+id/price_no_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingTop="5dp"
+        android:text="1、"
+        android:textSize="16dp"
+        android:layout_marginLeft="5dp" />
+    <!-- 标准价格编号TextView -->
+
+    <!-- 标准价格基本信息线性布局 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!-- 仪器名称 -->
+        <TextView
+            android:id="@+id/price_instrumentName_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="仪器名称：扫描电子显微镜 SU-3500"/>
+        <!-- 仪器名称 -->
+
+        <!-- 分析项目名称 -->
+        <TextView
+            android:id="@+id/price_projectName_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="分析项目名称：扫描电镜形态观察"/>
+        <!-- 分析项目名称 -->
+
+        <!-- 样品分类 -->
+        <TextView
+            android:id="@+id/price_sampleClassification_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="样品分类：固态或粉末"/>
+        <!-- 样品分类 -->
+
+        <!-- 前处理标准 -->
+        <TextView
+            android:id="@+id/price_preDealStandardName_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="前处理标准：JSM电镜收费标准"/>
+        <!-- 前处理标准 -->
+
+        <!-- 前处理计费模式 -->
+        <TextView
+            android:id="@+id/price_preDealModel_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="前处理计费模式：样品数计费"/>
+        <!-- 前处理计费模式 -->
+
+        <!-- 分析项目标准 -->
+        <TextView
+            android:id="@+id/price_analysisProjectStandardName_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="分析项目标准：扫描电镜收费标准"/>
+        <!-- 分析项目标准 -->
+
+        <!-- 分析项目计费模式 -->
+        <TextView
+            android:id="@+id/price_analysisProjectModel_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:singleLine="true"
+            android:text="分析项目计费模式：样品数计费"/>
+        <!-- 分析项目计费模式 -->
+
+    </LinearLayout>
+    <!-- 标准价格信息线性布局 -->
+
+</LinearLayout>

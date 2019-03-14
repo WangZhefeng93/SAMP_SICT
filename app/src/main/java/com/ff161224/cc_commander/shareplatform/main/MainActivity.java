@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
                             this.getString(R.string.supplies_information),
                             this.getString(R.string.standard_information),
                             this.getString(R.string.price_information),
+                            this.getString(R.string.sample_information),
                             this.getString(R.string.log_information),
-                            this.getString(R.string.statistical_information),
                             this.getString(R.string.personnel_information),
                             this.getString(R.string.permissions_settings)};
 

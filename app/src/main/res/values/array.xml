@@ -67,4 +67,14 @@
         <item>李四</item>
         <item>王五</item>
     </string-array>
+    <string-array name="price_search_isUsable_array">
+        <item>--请选择--</item>
+        <item>否</item>
+        <item>是</item>
+    </string-array>
+    <string-array name="price_dealModel_array">
+        <item>--请选择--</item>
+        <item>时间计费</item>
+        <item>样品数计费</item>
+    </string-array>
 </resources>
