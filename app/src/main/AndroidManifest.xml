@@ -105,7 +105,10 @@
         <activity android:name=".main.dataInfo.priceInfo.select.SelectInstrumentActivity" />
         <activity android:name=".main.dataInfo.priceInfo.select.SelectProjectActivity" />
         <activity android:name=".main.dataInfo.priceInfo.select.SelectPreDealStandardActivity" />
-        <activity android:name=".main.dataInfo.priceInfo.select.SelectAnalysisProjectStandardActivity"></activity>
+        <activity android:name=".main.dataInfo.priceInfo.select.SelectAnalysisProjectStandardActivity" />
+        <activity android:name=".main.dataInfo.sampleInfo.detail.SampleInfoActivity" />
+        <activity android:name=".main.dataInfo.sampleInfo.edit.EditSampleInfoActivity" />
+        <activity android:name=".main.dataInfo.sampleInfo.create.CreateSampleInfoActivity"></activity>
     </application>
 
 </manifest>

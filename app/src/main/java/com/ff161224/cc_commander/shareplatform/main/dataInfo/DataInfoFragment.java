@@ -24,6 +24,7 @@ import com.ff161224.cc_commander.shareplatform.R;
 import com.ff161224.cc_commander.shareplatform.SearchGridView;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.priceInfo.detail.PriceInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.projectInfo.detail.ProjectInfoActivity;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.sampleInfo.detail.SampleInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.standardInfo.detail.StandardInfoActivity;
 
 import java.util.ArrayList;
@@ -211,6 +212,10 @@ public class DataInfoFragment extends Fragment {
                             break;
                         case 4:
                             intent = new Intent(getActivity(), PriceInfoActivity.class);
+                            getActivity().startActivity(intent);
+                            break;
+                        case 5: //样品信息
+                            intent = new Intent(getActivity(), SampleInfoActivity.class);
                             getActivity().startActivity(intent);
                             break;
                     }

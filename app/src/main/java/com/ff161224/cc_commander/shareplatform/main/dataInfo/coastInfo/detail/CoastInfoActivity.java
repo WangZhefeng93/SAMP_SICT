@@ -346,7 +346,7 @@ public class CoastInfoActivity extends AppCompatActivity {
     }
 
     /**
-     * 筛选仪器信息逻辑，返回筛选结果集合
+     * 筛选信息逻辑，返回筛选结果集合
      * @param coast_search_id_value：耗材ID
      * @param coast_search_name_value：耗材名称
      * @return
