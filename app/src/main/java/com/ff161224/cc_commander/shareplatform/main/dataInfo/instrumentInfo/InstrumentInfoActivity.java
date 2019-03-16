@@ -22,6 +22,8 @@ import android.widget.Toast;
 import com.ff161224.cc_commander.shareplatform.R;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.create.basic.CreateNewInstrumentActivity1;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.detail.InstrumentDetailInfoActivity;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.logInfo.detail.LogInfoActivity;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.switchInfo.detail.SwitchingInfoActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,6 +45,7 @@ public class InstrumentInfoActivity extends AppCompatActivity {
     private ArrayList<HashMap<String,Object>> instrument_basic_info_current_list = new ArrayList<>();
     private ArrayList<HashMap<String,Object>> instrument_basic_info_result_list = new ArrayList<>();
 
+    private CharSequence []items = {"查看","工作日志","开关机记录","删除"};
     private final String[] order_model_arr = {"不选","时间预约","项目预约"};  //设置预约模式Spinner数组
     private final String[] order_way_arr = {"不选","可自动预约","不可自动预约"}; //设置预约方式Spinner数组
     private String instrument_search_name_input;    //用户输入的仪器名称筛选内容
@@ -188,24 +191,49 @@ public class InstrumentInfoActivity extends AppCompatActivity {
         instrument_basic_info_listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                new AlertDialog.Builder(InstrumentInfoActivity.this).setTitle("系统提示")//设置对话框标题
-                        .setMessage("您确定要删除"+instrument_basic_info_current_list.get(position).get("instrument_name").toString()+"吗？")//设置显示的内容
-                        .setPositiveButton("确定",new DialogInterface.OnClickListener() {//添加确定按钮
+                new android.support.v7.app.AlertDialog.Builder(InstrumentInfoActivity.this)
+                        .setTitle("操作仪器信息")
+                        .setItems(items, new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
-                                // TODO Auto-generated method stub
-                                Toast.makeText(InstrumentInfoActivity.this, "点击的是第"+(position+1)+"项中的删除按钮,删除"+instrument_basic_info_current_list.get(position).get("instrument_name").toString()+"成功", Toast.LENGTH_SHORT).show();
-                                instrument_basic_info_current_list.remove(position);
-                                baseAdapter.notifyDataSetChanged();
-                                //getActivity().finish();
+                            public void onClick(DialogInterface dialog, int which) {
+                                switch (which) {
+                                    case 0:     //查看
+                                        intent = new Intent(InstrumentInfoActivity.this,InstrumentDetailInfoActivity.class);
+                                        startActivity(intent);
+                                        break;
+                                    case 1:     //工作日志
+                                        intent = new Intent(InstrumentInfoActivity.this,LogInfoActivity.class);
+                                        startActivity(intent);
+                                        break;
+                                    case 2:     //开关机记录
+                                        intent = new Intent(InstrumentInfoActivity.this,SwitchingInfoActivity.class);
+                                        startActivity(intent);
+                                        break;
+                                    case 3:     //删除
+                                        new AlertDialog.Builder(InstrumentInfoActivity.this).setTitle("系统提示")//设置对话框标题
+                                                .setMessage("您确定要删除"+instrument_basic_info_current_list.get(position).get("instrument_name").toString()+"吗？")//设置显示的内容
+                                                .setPositiveButton("确定",new DialogInterface.OnClickListener() {//添加确定按钮
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件
+                                                        // TODO Auto-generated method stub
+                                                        Toast.makeText(InstrumentInfoActivity.this, "点击的是第"+(position+1)+"项中的删除按钮,删除"+instrument_basic_info_current_list.get(position).get("instrument_name").toString()+"成功", Toast.LENGTH_SHORT).show();
+                                                        instrument_basic_info_current_list.remove(position);
+                                                        baseAdapter.notifyDataSetChanged();
+                                                        //getActivity().finish();
+                                                    }
+                                                }).setNegativeButton("返回",new DialogInterface.OnClickListener() {//添加返回按钮
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {//响应事件
+                                                // TODO Auto-generated method stub
+                                                Log.i("alertdialog"," 请保存数据！");
+                                            }
+                                        }).show();//在按键响应事件中显示此对话框
+                                        break;
+                                }
                             }
-                        }).setNegativeButton("返回",new DialogInterface.OnClickListener() {//添加返回按钮
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {//响应事件
-                        // TODO Auto-generated method stub
-                        Log.i("alertdialog"," 请保存数据！");
-                    }
-                }).show();//在按键响应事件中显示此对话框
+                        })
+                        .create()
+                        .show();
                 return true;
             }
         });

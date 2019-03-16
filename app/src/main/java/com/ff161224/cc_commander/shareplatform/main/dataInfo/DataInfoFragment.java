@@ -22,6 +22,7 @@ import com.ff161224.cc_commander.shareplatform.main.dataInfo.coastInfo.detail.Co
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.instrumentInfo.InstrumentInfoActivity;
 import com.ff161224.cc_commander.shareplatform.R;
 import com.ff161224.cc_commander.shareplatform.SearchGridView;
+import com.ff161224.cc_commander.shareplatform.main.dataInfo.logInfo.detail.LogInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.priceInfo.detail.PriceInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.projectInfo.detail.ProjectInfoActivity;
 import com.ff161224.cc_commander.shareplatform.main.dataInfo.sampleInfo.detail.SampleInfoActivity;
@@ -217,6 +218,15 @@ public class DataInfoFragment extends Fragment {
                         case 5: //样品信息
                             intent = new Intent(getActivity(), SampleInfoActivity.class);
                             getActivity().startActivity(intent);
+                            break;
+                        case 6: //发布通知
+
+                            break;
+                        case 7:     //通知浏览
+
+                            break;
+                        case 8:     //人员信息
+
                             break;
                     }
                 }

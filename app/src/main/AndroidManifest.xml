@@ -108,7 +108,14 @@
         <activity android:name=".main.dataInfo.priceInfo.select.SelectAnalysisProjectStandardActivity" />
         <activity android:name=".main.dataInfo.sampleInfo.detail.SampleInfoActivity" />
         <activity android:name=".main.dataInfo.sampleInfo.edit.EditSampleInfoActivity" />
-        <activity android:name=".main.dataInfo.sampleInfo.create.CreateSampleInfoActivity"></activity>
+        <activity android:name=".main.dataInfo.sampleInfo.create.CreateSampleInfoActivity" />
+        <activity android:name=".main.dataInfo.logInfo.detail.LogInfoActivity" />
+        <activity android:name=".main.dataInfo.logInfo.detail.LogInfoDetailActivity" />
+        <activity android:name=".main.dataInfo.logInfo.edit.EditLogInfoActivity" />
+        <activity android:name=".main.dataInfo.logInfo.create.CreateLogInfoActivity" />
+        <activity android:name=".main.dataInfo.switchInfo.detail.SwitchingInfoActivity" />
+        <activity android:name=".main.dataInfo.logInfo.select.SelectUsePersonActivity" />
+        <activity android:name=".main.dataInfo.logInfo.select.SelectOrderFormNoActivity"></activity>
     </application>
 
 </manifest>

@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                             this.getString(R.string.standard_information),
                             this.getString(R.string.price_information),
                             this.getString(R.string.sample_information),
-                            this.getString(R.string.log_information),
-                            this.getString(R.string.switch_recording),
+                            this.getString(R.string.provide_announcement),
+                            this.getString(R.string.notification_browsing),
                             this.getString(R.string.personel_information)};
 
         //初始化预约结算Fragment图标提示

@@ -5,7 +5,7 @@
     <string name="tittle_name">仪器设备共享管理平台</string>
 
     <!-- MainActivity底部导航图标提示 -->
-    <string name="function_module_1">数据信息</string>
+    <string name="function_module_1">信息查阅</string>
     <string name="function_module_2">预约结算</string>
     <string name="function_module_3">扫码上机</string>
     <string name="function_module_4">个人中心</string>
@@ -22,6 +22,8 @@
     <string name="personel_information">人员信息</string>
     <string name="permissions_settings">权限设置</string>
     <string name="switch_recording">开关机记录</string>
+    <string name="provide_announcement">发布通知</string>
+    <string name="notification_browsing">通知浏览</string>
 
     <!-- OrderReviewFragment图标提示 -->
     <string name="hot_order_tip_tv">热门仪器预约</string>
