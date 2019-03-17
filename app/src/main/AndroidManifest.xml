@@ -115,7 +115,10 @@
         <activity android:name=".main.dataInfo.logInfo.create.CreateLogInfoActivity" />
         <activity android:name=".main.dataInfo.switchInfo.detail.SwitchingInfoActivity" />
         <activity android:name=".main.dataInfo.logInfo.select.SelectUsePersonActivity" />
-        <activity android:name=".main.dataInfo.logInfo.select.SelectOrderFormNoActivity"></activity>
+        <activity android:name=".main.dataInfo.logInfo.select.SelectOrderFormNoActivity" />
+        <activity android:name=".main.dataInfo.switchInfo.edit.EditSwitchingInfoActivity" />
+        <activity android:name=".main.dataInfo.switchInfo.create.CreateSwitchingInfoActivity" />
+        <activity android:name=".main.dataInfo.switchInfo.detail.SwitchingInfoDetailActivity"></activity>
     </application>
 
 </manifest>
